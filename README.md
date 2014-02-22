@@ -2,6 +2,8 @@
 
 This is a Reddit-style application to demonstrate foundation programming and web development skills.
 
+http://megbyrne-bloccit.herokuapp.com/ 
+
 Made with my mentor at Bloc (http://bloc.io)
 
 
