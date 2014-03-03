@@ -34,6 +34,7 @@ gem 'jquery-rails'
 gem 'faker'
 gem 'devise'
 gem 'cancan'
+gem 'redcarpet'
 
 gem 'rails_12factor'
 
