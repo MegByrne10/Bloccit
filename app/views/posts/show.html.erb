@@ -6,6 +6,7 @@
       <%= image_tag(@post.user.avatar.tiny.url) if @post.user.avatar? %>
       submitted <%= time_ago_in_words(@post.created_at) %> ago by <%= @post.user.name %>
     </small>
+    <p><%= image_tag(@post.image.url) if @post.image? %></P>
     <p><%= markdown @post.body %></p>
   </div>
   <div class="span4">
