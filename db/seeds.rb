@@ -28,14 +28,19 @@ rand(5..15).times do
       )
     p.update_attribute(:created_at, Time.now - rand(600..31536000))
 
-    topics.rotate!
+    topics.rotate! 
+  end 
+end
 
-    rand(3..7).times do
-      p.comments.create(
-        body: Faker::Lorem.paragraphs(rand(1..2)).join("\n")
-        )
+post_count = Post.count
+  User.all.each do |user|
+    rand(30..50).times do
+      p = Post.find(rand(1..post_count))
+      c = user.comments.create(
+        body: Faker::Lorem.paragraphs(rand(1..2)).join("\n"),
+        post: p)
+      c.update_attribute(:created_at, Time.now - rand(600..31536000))
     end
-  end
 end
 
 u = User.new(
