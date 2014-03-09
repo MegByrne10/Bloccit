@@ -25,7 +25,7 @@
     </ul>
 
     <% if flash[:notice] %>
-      <div>
+      <div class="alert alert-success">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         <%= flash[:notice] %>
       </div>
@@ -35,7 +35,7 @@
         <%= flash[:error] %>
       </div>
     <% elsif flash[:alert] %>
-      <div class="alert">
+      <div class="alert alert-error">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         <%= flash[:alert] %>
       </div>  
