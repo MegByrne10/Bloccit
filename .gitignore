@@ -19,3 +19,5 @@
 
 # Carrierwave image
 public/uploads
+
+.DS_Store

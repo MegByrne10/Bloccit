@@ -40,6 +40,7 @@ gem 'mini_magick'
 gem 'fog'
 gem 'figaro'
 gem 'will_paginate', '~> 3.0'
+gem 'omniauth-facebook'
 
 gem 'rails_12factor'
 
