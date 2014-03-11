@@ -28,6 +28,7 @@ rand(5..15).times do
       )
     p.update_attribute(:created_at, Time.now - rand(600..31536000))
 
+    p.update_rank
     topics.rotate! 
   end 
 end
