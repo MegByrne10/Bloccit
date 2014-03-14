@@ -1,19 +1,33 @@
-$bodyBackground: #F9F5F7;
+$bodyBackground: #F5F9F9;
 $linkColor: #267B6D;
-$nav-tabLinkBackgroundHover: #BAC5CF;
+
 $heroUnitBackground: #BAC5CF;
 
 .nav {
   margin-top: 5px;
 }
 
+.nav>nav-tabs>li>a:hover {
+  background-color: #BAC5CF !important;
+}
+
 .user-info {
   margin-top: 9px;
+}
+
+.divider {
+  background-color: #267B6D;
+  color: #267B6D;
 }
 
 .post-image { 
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.avatar-image {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .vote-arrows {
