@@ -32,11 +32,11 @@ describe User do
     end
     it "should have 'posts_count' on user" do
       users = User.top_rated
-      users.first.posts_count.should eq(1)
+      users.first.posts.count.should eq(1)
     end
     it "should have 'comments_count' on user" do
       users = User.top_rated
-      users.first.comments_count.should eq(2)
+      users.first.comments.count.should eq(2)
     end
   end
 end
