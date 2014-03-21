@@ -8,13 +8,17 @@ class CommentsController < ApplicationController
 
     @comments = @post.comments #sets up comments for render on failed validation
     @comment.post = @post #assigns the post to the comment being created
-    
+    @new_comment = Comment.new
+
     authorize! :create, @comment, message: "You need to be signed in to do that."
     if @comment.save
-      redirect_to [@topic, @post], notice: "Comment was saved successfully."
+      flash[:notice] = "Comment was created."
     else
       flash[:error] = "There was an error saving your comment. Please try again."
-      render 'posts/show' #On failed validation or error, render this view
+    end
+
+    respond_with(@comment) do |f|
+      f.html { redirect_to [@topic, @post] }
     end
   end
 
